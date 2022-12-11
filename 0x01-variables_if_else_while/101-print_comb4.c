@@ -7,32 +7,31 @@
  */
 int main(void)
 {
-	int ones = '0';
-	int tens = '0';
-	int hundreds = '0';
+	int digit1;
+       	int digit2;
+	int digit3;
+      
 
-	for (hundreds = '0'; hundreds <= 9; hundreds++)
+	for (digit1 = 0; digit1 < 8; digit1++)
 	{
-		for (tens = '0'; tens <= 9; tens++)
+		for (digit2 = digit1 + 1; digit2 < 9; digit2++)
 		{
-			for (ones = '0'; ones <= 9; ones++)
+			for (digit3 = digit2 + 1; digit3 < 10; digit3++)
 			{
-				if (!((ones == tens) || (tens == hundreds) ||
-							(tens > ones) || (hundreds > tens)))/*eliminates repitition*/
-				{
-					putchar(hundreds);
-					putchar(tens);
-					putchar(ones);
-					if (!(ones == '9' && tens == '8' && hundreds == '7'))
-						/*adds commas and spaces*/
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
+				putchar((digit1 % 10) + '0');
+				putchar((digit2 % 10) + '0');
+				putchar((digit3 % 10) + '0');
+
+				if (digit1 == 7 && digit2 == 8 && digit3 == 9)
+					continue;
+				
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
+
 	putchar('\n');
+
 	return (0);
-}
+ }	
