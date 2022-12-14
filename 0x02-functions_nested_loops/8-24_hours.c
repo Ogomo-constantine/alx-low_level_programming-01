@@ -9,7 +9,7 @@ void jack_bauer(void)
 
 	for (h1 = 0; h1 <= 2; h1++)
 	{
-		for (h2 = 0; min <= 9; h2++)
+		for (h2 = 0; h2 <= 9; h2++)
 		{
 			if ((h1 <= 1 && h2 <= 9) || (h1 <= 2 && h2 <= 3))
 			{
@@ -23,7 +23,7 @@ void jack_bauer(void)
 						_putchar(m1 + '0');
 						_putchar(m2 + '0');
 
-						putchar('\n');
+						_putchar('\n');
 					}
 				}
 			}
