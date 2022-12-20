@@ -2,6 +2,8 @@
 /**
  * rev_string - a code that reverse a string
  * @s: string
+ *
+ * Return: void
  */
 void rev_string(char *s)
 {
