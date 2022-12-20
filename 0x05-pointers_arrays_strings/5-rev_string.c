@@ -1,4 +1,4 @@
-#indlude "main.h"
+#include "main.h"
 /**
  * rev_string - a code that reverse a string
  * @s: string
