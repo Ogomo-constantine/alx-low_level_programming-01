@@ -19,7 +19,7 @@ int main(void)
 		sum += pass;
 		printf("%c", pass);
 	}
-	prmtf("%c", 2772 - pass);
+	printf("%c", 2772 - pass);
 
 	return (0);
 }
