@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
+#define PASSWORD_LENGTH 10
 /**
  * main - generates random valid password for 101-crackme program
  * Return: 0 on success
@@ -12,6 +13,7 @@ int main(void)
 
 	char password[PASSWORD_LENGTH + 1];
 
+	// generate a random password
 	for (int i = 0; i < PASSWORD_LENGTH; i++)
 	{
 		password[i] = rand() % 26 + 'a';
