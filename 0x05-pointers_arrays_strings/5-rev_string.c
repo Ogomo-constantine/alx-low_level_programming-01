@@ -5,16 +5,24 @@
  *
  * Return: void
  */
-
 void rev_string(char *s)
 {
-	size_t len = strlen(s);
+	int i, j, k, temp;
 
-	for (size_t i = 0; i < len / 2; i++)
+	i = 0;
+	while (s[i] != '\0')
 	{
-		char temp = s[i];
+		i++;
+	}
+	k = 0;
+	j = i - 1;
 
-		s[i] = s[len - i - 1];
-		s[len - i - 1] = temp;
+	while (k < j)
+	{
+		temp = s[k];
+		s[k] = s[j];
+		s[j] = temp;
+		k++;
+		j--;
 	}
 }
