@@ -5,11 +5,13 @@
  */
 void print_rev(char *s)
 {
-	size_t len = strlen(s);
+	int i;
 
-	for (size_t i = len; i > 0; i--)
+	for (i = 0; s[i] != '\0'; i++)
+		;
+	for (i = i - 1; s[i] != '\0'; i--)
 	{
-		printf("%c", s[i - 1]);
+		_printf(s[i]);
 	}
-	printf("\n");
+	printf('\n');
 }
