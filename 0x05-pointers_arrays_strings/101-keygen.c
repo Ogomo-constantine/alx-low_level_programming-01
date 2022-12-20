@@ -9,18 +9,17 @@
  */
 int main(void)
 {
+	int pass, sum;
+
 	srand(time(NULL));
-
-	char password[PASSWORD_LENGTH + 1];
-
-	// generate a random password
-	for (int i = 0; i < PASSWORD_LENGTH; i++)
+	sum = 0;
+	while (sum <= 2645)
 	{
-		password[i] = rand() % 26 + 'a';
+		pass = (rand() % 128);
+		sum += pass;
+		printf("%c", pass);
 	}
-	password[PASSWORD_LENGTH] = '\0';
-
-	printf("Generated password: %s\n", password);
+	prmtf("%c", 2772 - pass);
 
 	return (0);
 }
