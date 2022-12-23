@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strncat - code that concatenate two strings
+ * *_strncat - code that concatenate two strings
  * @dest: string to be appende upon
  * @src: string to be completed at the end of dest
  * @n: integer
@@ -9,22 +9,13 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	char *ch = dest;
+	int i = 0, dest_l = 0;
 
-	while (*ch != '\0')
-	{
-		ch++;
-	}
+	while (dest[i++])
+		dest_l++;
 
-	int i;
-
-	for (i = 0; i < n && *src != '\0'; i++)
-	{
-		*ch = *src;
-		ch++;
-	}
-
-	*ch = ('\0');
+	for (i = 0; src[i] && i < n; i++)
+	       dest[dest_l++] = src[i];
 
 	return (dest);
 }
