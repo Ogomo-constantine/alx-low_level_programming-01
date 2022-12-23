@@ -6,14 +6,18 @@
  * @n: no. of element
  * Return: void
  */
+
 void reverse_array(int *a, int n)
+
 {
+
 	int temp, i;
 
-	for (i = 0; i < n--; i++)
+	for (i = n - 1; i >= n / 2; i--)
 	{
-		tmp = a[i];
-		a[i] = a[n];
-		a[n] = tmp;
+		tmp = a[n - 1 - i];
+		a[n - 1 - i] = a[i];
+		a[i] = tmp;
 	}
+
 }
