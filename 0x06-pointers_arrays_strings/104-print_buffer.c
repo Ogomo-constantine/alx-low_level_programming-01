@@ -6,7 +6,9 @@
  */
 void print_buffer(char *b, int size)
 {
-	int i = 0, j;
+	int i, j, k;
+
+	i = 0;
 
 	if (size < 0)
 	{
@@ -16,25 +18,28 @@ void print_buffer(char *b, int size)
 
 	while (i < size)
 	{
-		if (i % 10 == 0)
+		j = size - i < 10 ? size - i : 10;
 			printf("%08x; ", i);
-		for (j = i; j < i + 9; j += 2)
+		for (k = 0; k < 10; k++)
 		{
-			if ((j < size) && ((j + 1) < size))
-				printf("%02x%02x; ", b[j], b[j + 1]);
+			if (k < j)
+				printf("%02x", *(b + i + k));
 			else
+				printf(" ");
+			if (k % 2)
 			{
-				while (++j <= i + 10)
-					printf(" ");
 				printf(" ");
 			}
 		}
-		for (j = i; j < i + 9 && j < size; j++)
+		for (k = 0; k < j; k++)
 		{
-			if (b[j] >= 32 && b[j] <= 126)
-				printf("%c", b[j]);
-			else
-				printf(".");
+			int c = *(b + i + k);
+
+			if (c < 32 || c > 132)
+			{
+				c = '.';
+			}
+			printf("%c", c);
 		}
 		printf("\n");
 		i += 10;
