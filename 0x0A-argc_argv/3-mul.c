@@ -7,18 +7,20 @@
  * @argv: array of argument
  * Retur: 0 if true 1 if false
  */
-int _atoi(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int a, b;
 
-	if (argc == 3)
+	b = 1;
+	if (argc < 3)
 	{
-		a = _atoi(argv[1]);
-		b = _atoi(argv[2]);
-
-				printf("%d\n", a * b);
-				return (0);
+		printf("Error\n");
+		return (1);
 	}
-	printf("Error\n");
-	return (1);
+	for (a = 1; a < argc; a++)
+	{
+		b = b * _atoi(argv[a]);
+	}
+	printf("%d\n", b);
+	return (0);
 }
