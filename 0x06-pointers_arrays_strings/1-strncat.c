@@ -5,7 +5,7 @@
  * @dest: string to be appende upon
  * @src: string to be completed at the end of dest
  * @n: integer
- * Retutn: new concatenated string
+ * Return: new concatenated string
  */
 char *_strncat(char *dest, char *src, int n)
 {
