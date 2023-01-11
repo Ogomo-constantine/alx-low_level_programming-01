@@ -8,7 +8,7 @@
  * pointer to duplicated string success
  * NULL if memory is insufficient
  */
-char *_strdup(char *str);
+char *_strdup(char *str)
 {
 	char *nstr;
 	unsigned int l, i;
