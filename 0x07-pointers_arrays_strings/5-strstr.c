@@ -19,7 +19,7 @@ char *_strstr(char *haystack, char *needle)
 			haystack++;
 			str2++;
 		}
-		if (*str == '\0')
+		if (*str2 == '\0')
 			return (str1);
 		haystack = str1 + 1;
 	}
