@@ -32,9 +32,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	if (num =< 0)
+	if (num < 0)
 		return (NULL);
-	if (num>= _strlen(s2))
+	if (num >= _strlen(s2))
 		num = _strlen(s2);
 
 	l = _strlen(s1) + num + 1;
