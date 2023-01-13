@@ -6,7 +6,7 @@
  * @b: size of memory to be allocated
  * Return: pointer toallocated memory
  */
-void *malloc_checked(unsigned int b);
+void *malloc_checked(unsigned int b)
 {
 	void *p = malloc(b);
 
