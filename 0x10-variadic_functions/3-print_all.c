@@ -25,10 +25,10 @@ void print_all(const char * const format, ...)
 				printf("%s%c", separator, va_arg(args, int));
 				break;
 			case 'i':
-				printf("%s%c", separator, va_arg(args, int));
+				printf("%s%d", separator, va_arg(args, int));
 				break;
 			case 'f':
-				printf("%s%c", separator, va_arg(args, double));
+				printf("%s%f", separator, va_arg(args, double));
 				break;
 			case 's':
 				s = va_arg(args, char *);
@@ -41,7 +41,7 @@ void print_all(const char * const format, ...)
 				continue;
 		}
 		separator = ", ";
-		i++
+		i++;
 	}
 	printf("\n");
 	va_end(args);
