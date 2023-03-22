@@ -1,1 +1,12 @@
-gcc -shared -o mylibrary.so mylibrary.c
+import ctypes
+
+lib = ctypes.CDLL('./mylibrary.so')
+
+a = 10
+b = 3
+
+print(f'{a} + {b} = {lib.add(a, b)}')
+print(f'{a} - {b} = {lib.sub(a, b)}')
+print(f'{a} * {b} = {lib.mul(a, b)}')
+print(f'{a} / {b} = {lib.div(a, b)}')
+print(f'{a} % {b} = {lib.mod(a, b)}')
